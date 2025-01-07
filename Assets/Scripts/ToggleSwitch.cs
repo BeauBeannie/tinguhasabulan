@@ -4,8 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ToggleSwitch : MonoBehaviour {
+
+    public AudioSource bgMusic; //bg music audiosource
+    public AudioSource sfxSource; //sfx audio source
     public GameObject switchOn, switchOff;
-    private bool muted = false;
+    private bool musicMuted = false;
+    private bool sfxMuted = false;
 
     public void OnChangeValue() {
         bool onoffSwitch = gameObject.GetComponent<Toggle>().isOn;
@@ -24,45 +28,78 @@ public class ToggleSwitch : MonoBehaviour {
 
     void Start()
     {
-        if(!PlayerPrefs.HasKey("muted"))
+        if(!PlayerPrefs.HasKey("musicMuted"))
         {
-            PlayerPrefs.SetInt("muted", 0);
-            Load();
+            PlayerPrefs.SetInt("musicMuted", 0);
         }
-        else
+        
+        if(!PlayerPrefs.HasKey("sfxMuted"))
         {
-            Load();
+            PlayerPrefs.SetInt("sfxMuted",0);
         }
 
-        AudioListener.pause = muted;
+        Load();
+        ApplySettings();
     }
 
-    public void OnButtonPress()
+    public void OnMusicToggle()
     {
-        if(muted == false)
+        musicMuted = !musicMuted;
+        bgMusic.mute = musicMuted;
+        Save();
+    }
+
+    public void OnSfxToggle()
+    {
+        sfxMuted = !sfxMuted; // Toggle SFX state
+        if (sfxSource != null)
         {
-            muted = true;
+            sfxSource.mute = sfxMuted; // Mute or unmute sfx
+        }
+        Save(); // Save preferences
+    }
+
+    /*public void OnButtonPress()
+    {
+        if(musicMuted == false)
+        {
+            musicMuted = true;
             AudioListener.pause = true;
         }
         else
         {
-            muted = false;
+            musicMuted = false;
             AudioListener.pause = false;
         }
 
         Save();
-    }
+    }*/
 
     //this is for the player's pref (PlayerPref)
 
     private void Load()
     {
-        muted = PlayerPrefs.GetInt("muted") == 1;
+        musicMuted = PlayerPrefs.GetInt("musicMuted") == 1;
+        sfxMuted = PlayerPrefs.GetInt("sfxMuted") == 1;
     }
 
     private void Save()
     {
-        PlayerPrefs.SetInt("muted", muted ? 1 : 0);
+        PlayerPrefs.SetInt("musicMuted", musicMuted ? 1 : 0);
+        PlayerPrefs.SetInt("sfxMuted", sfxMuted ? 1 : 0);
+    }
+
+    private void ApplySettings()
+    {
+        // Apply music and SFX mute settings
+        if (bgMusic != null)
+        {
+            bgMusic.mute = musicMuted;
+        }
+        if (sfxSource != null)
+        {
+            sfxSource.mute = sfxMuted;
+        }
     }
 
 
