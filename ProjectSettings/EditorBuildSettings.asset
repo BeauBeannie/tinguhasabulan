@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/In-Game/Gameplay.unity
     guid: fb1cb3494f5f36b418431b1483324580
   - enabled: 1
-    path: Assets/Scenes/Tutorial.unity
+    path: Assets/Scenes/Tutorial Board.unity
     guid: 4bcc15847fbb5b442a649d39d2095369
   - enabled: 1
     path: Assets/Scenes/In-Game/Test.unity
