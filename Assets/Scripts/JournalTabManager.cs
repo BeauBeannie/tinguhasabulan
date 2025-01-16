@@ -24,8 +24,12 @@ public class JournalTabManager : MonoBehaviour
     public float bookOpeningDuration = 2f;   // Duration of the book-opening animation
     public float animationDuration = 1f;     // Duration of the page flip animation
 
-    private int currentPage = 1;             // Current active tab
-    
+    //private int currentPage = 1;             // Current active tab
+
+
+    private int currentTab = 1;              // Current active tab
+    private int currentPageInTab = 1;        // Current active page in the current tab
+    private int totalPagesInTab = 1;         // Total pages in the current tab
 
     private void Start()
     {
@@ -46,13 +50,16 @@ public class JournalTabManager : MonoBehaviour
 
         // Play the idle animation for Tab 1
         Journal.Play("idleOpen1", 0, 0f);
-        currentPage = 1;
+        
+        currentTab = 1;
+        currentPageInTab = 1;
+        totalPagesInTab = GetTotalPagesInTab(currentTab);
+
+        // Show the content for Tab 1
+        ShowContentForTab(currentTab, currentPageInTab);
 
         // Turn the RevealAnimation GameObject back on
         RevealAnimationObject.SetActive(true);
-
-        // Show the content for Tab 1
-        ShowContentForTab(1);
 
         // Now trigger the content reveal animation after switching tabs
         PlayRevealAnimation();
@@ -60,16 +67,16 @@ public class JournalTabManager : MonoBehaviour
         Debug.Log("Initialized on Tab 1");
     }
 
-    public void GoToPage(int targetPage)
+    public void GoToPage(int targetTab)
     {
-        if (currentPage == targetPage)
+        if (currentTab == targetTab)
             return; // Already on the target page, no action required
         
         // Hide current tab content
-        HideContentForTab(currentPage);
+        HideContentForTab(currentTab, currentPageInTab);
 
         // Find the appropriate transition
-        PageTransition transition = pageTransitions.Find(t => t.from == currentPage && t.to == targetPage);
+        PageTransition transition = pageTransitions.Find(t => t.from == currentTab && t.to == targetTab);
 
         if (transition != null)
         {
@@ -90,21 +97,22 @@ public class JournalTabManager : MonoBehaviour
             }
 
             // Transition to the idle animation for the target tab
-            StartCoroutine(TransitionToIdle(targetPage));
+            StartCoroutine(TransitionToIdle(targetTab));
         }
         else
         {
-            Debug.LogWarning($"No transition defined from {currentPage} to {targetPage}");
+            Debug.LogWarning($"No transition defined from {currentTab} to {targetTab}");
         }
     }
 
-    private IEnumerator TransitionToIdle(int targetPage)
+
+    private IEnumerator TransitionToIdle(int targetTab)
     {
         // Wait for the flip animation to complete
         yield return new WaitForSeconds(animationDuration);
 
         // Construct the idle animation name based on the target page
-        string idleAnimationName = $"idleOpen{targetPage}";
+        string idleAnimationName = $"idleOpen{targetTab}";
 
         // Play the idle animation for the target tab
         Journal.Play(idleAnimationName, 0, 0f);
@@ -112,59 +120,149 @@ public class JournalTabManager : MonoBehaviour
         // Log for debugging
         Debug.Log($"Transitioned to {idleAnimationName}");
 
+        // Switch to the new tab and reset to the first page
+        currentTab = targetTab;
+        currentPageInTab = 1;
+        totalPagesInTab = GetTotalPagesInTab(targetTab);
+
+        // Show the new page with reveal animation
+        //StartCoroutine(ShowContentWithReveal(currentTab, currentPageInTab));
+
         // Show the content for the target tab
-        ShowContentForTab(targetPage);
+        ShowContentForTab(currentTab, currentPageInTab);
 
         // Now trigger the content reveal animation after switching tabs
         PlayRevealAnimation();
+    
+    }
 
-        // Update the current page
-        currentPage = targetPage;
+    public void FlipPageRight()
+    {
+        if (currentPageInTab < totalPagesInTab)
+        {
+            // Hide the current page
+            HideContentForTab(currentTab, currentPageInTab);
+
+            // Increment to the next page
+            currentPageInTab++;
+
+            // Play the page flip right animation
+            Journal.Play("pageFlipRight", 0, 0f);
+
+            // Show the new page with reveal animation
+            StartCoroutine(ShowContentWithReveal(currentTab, currentPageInTab));
+
+            Debug.Log($"Flipped to page {currentPageInTab} of Tab {currentTab}");
+        }
+        else
+        {
+            Debug.LogWarning("Already on the last page of the tab.");
+        }
+    }
+
+    public void FlipPageLeft()
+    {
+        if (currentPageInTab > 1)
+        {
+            // Hide the current page
+            HideContentForTab(currentTab, currentPageInTab);
+
+            // Decrement to the previous page
+            currentPageInTab--;
+
+            // Play the page flip left animation
+            Journal.Play("pageFlipLeft", 0, 0f);
+
+            // Show the new page with reveal animation
+            StartCoroutine(ShowContentWithReveal(currentTab, currentPageInTab));
+
+            Debug.Log($"Flipped to page {currentPageInTab} of Tab {currentTab}");
+        }
+        else
+        {
+            Debug.LogWarning("Already on the first page of the tab.");
+        }
     }
 
     public void PlayRevealAnimation()
     {
-        // Play the reveal animation as an overlay
+        // Ensure the reveal animation object is active
+        if (!RevealAnimationObject.activeSelf)
+        {
+            RevealAnimationObject.SetActive(true);
+        }
+
+        // Play the reveal animation
         RevealAnimator.Play("contentReveal", 0, 0f);
 
-        // Optionally, log the action
         Debug.Log("Playing content reveal animation.");
     }
-
-    private void ShowContentForTab(int tabNumber)
+    private void ShowContentForTab(int tabNumber, int pageNumber)
     {
-        // Activate the content for the specified tab
-        Transform tabContent = ContentContainer.transform.Find($"Tab{tabNumber}Content");
-        if (tabContent != null)
+        // Find the specific page within the tab
+        Transform pageContent = ContentContainer.transform.Find($"Tab{tabNumber}Content/Page{pageNumber}");
+        if (pageContent != null)
         {
-            tabContent.gameObject.SetActive(true);
+            pageContent.gameObject.SetActive(true); // Activate the page
+
         }
         else
         {
-            Debug.LogWarning($"Content for Tab {tabNumber} not found.");
+            Debug.LogWarning($"Content for Tab {tabNumber}, Page {pageNumber} not found.");
         }
     }
 
-    private void HideContentForTab(int tabNumber)
+    private IEnumerator ShowContentWithReveal(int tabNumber, int pageNumber)
     {
-        // Deactivate the content for the specified tab
-        Transform tabContent = ContentContainer.transform.Find($"Tab{tabNumber}Content");
-        if (tabContent != null)
+        // Wait for the page flip animation to complete
+        yield return new WaitForSeconds(0.5f);
+
+        // Show the content
+        ShowContentForTab(tabNumber, pageNumber);
+
+        // Play the content reveal animation
+        PlayRevealAnimation();
+    }
+
+    private void HideContentForTab(int tabNumber, int pageNumber)
+    {
+        // Find the specific page within the tab
+        Transform pageContent = ContentContainer.transform.Find($"Tab{tabNumber}Content/Page{pageNumber}");
+        if (pageContent != null)
         {
-            tabContent.gameObject.SetActive(false);
+            pageContent.gameObject.SetActive(false); // Deactivate the page
         }
         else
         {
-            Debug.LogWarning($"Content for Tab {tabNumber} not found.");
+            Debug.LogWarning($"Content for Tab {tabNumber}, Page {pageNumber} not found.");
         }
     }
+
 
     private void HideAllContent()
     {
         // Disable all tab content at the start
-        foreach (Transform child in ContentContainer.transform)
+        foreach (Transform tab in ContentContainer.transform)
         {
-            child.gameObject.SetActive(false);
+            foreach (Transform page in tab)
+            {
+                page.gameObject.SetActive(false);
+            }
+        }
+    }
+
+    private int GetTotalPagesInTab(int tabNumber)
+    {
+        // Count the number of pages in the tab by checking the hierarchy
+        Transform tabContent = ContentContainer.transform.Find($"Tab{tabNumber}Content");
+        if (tabContent != null)
+        {
+            return tabContent.childCount;
+        }
+        else
+        {
+            Debug.LogWarning($"Tab {tabNumber} not found.");
+            return 0;
         }
     }
 }
