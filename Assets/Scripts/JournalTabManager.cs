@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class PageTransition
@@ -19,17 +20,25 @@ public class JournalTabManager : MonoBehaviour
     
     public GameObject ContentContainer;      // Parent GameObject holding all tab content
 
+    public GameObject Buttons;      //Holds all the buttons
+
     public List<PageTransition> pageTransitions; // List of all possible transitions
+    public List<Button> tabButtons; // Add references to all tab buttons here
+
+    private bool isAnimating = false;
 
     public float bookOpeningDuration = 2f;   // Duration of the book-opening animation
     public float animationDuration = 1f;     // Duration of the page flip animation
 
     //private int currentPage = 1;             // Current active tab
 
+    
 
     private int currentTab = 1;              // Current active tab
     private int currentPageInTab = 1;        // Current active page in the current tab
     private int totalPagesInTab = 1;         // Total pages in the current tab
+
+    [SerializeField] private float fadeDuration = 0.5f;   //control the fade in of the content
 
     private void Start()
     {
@@ -45,6 +54,8 @@ public class JournalTabManager : MonoBehaviour
 
     private IEnumerator OpenBookAndInitialize()
     {
+        SetButtonsVisible(false); // Disable buttons during initialization
+
         // Wait for the book-opening animation to complete
         yield return new WaitForSeconds(bookOpeningDuration);
 
@@ -64,14 +75,19 @@ public class JournalTabManager : MonoBehaviour
         // Now trigger the content reveal animation after switching tabs
         PlayRevealAnimation();
 
+        SetButtonsVisible(true); // Re-enable buttons after initialization
+
         Debug.Log("Initialized on Tab 1");
     }
 
     public void GoToPage(int targetTab)
     {
-        if (currentTab == targetTab)
+        if (isAnimating || currentTab == targetTab)
             return; // Already on the target page, no action required
         
+        isAnimating = true;
+        SetButtonsVisible(false); //hide them buttons during animations
+
         // Hide current tab content
         HideContentForTab(currentTab, currentPageInTab);
 
@@ -102,6 +118,8 @@ public class JournalTabManager : MonoBehaviour
         else
         {
             Debug.LogWarning($"No transition defined from {currentTab} to {targetTab}");
+            isAnimating = false;
+            SetButtonsVisible(true); //pops the buttons back up
         }
     }
 
@@ -125,63 +143,82 @@ public class JournalTabManager : MonoBehaviour
         currentPageInTab = 1;
         totalPagesInTab = GetTotalPagesInTab(targetTab);
 
-        // Show the new page with reveal animation
-        //StartCoroutine(ShowContentWithReveal(currentTab, currentPageInTab));
 
         // Show the content for the target tab
         ShowContentForTab(currentTab, currentPageInTab);
 
         // Now trigger the content reveal animation after switching tabs
         PlayRevealAnimation();
+
+        isAnimating = false;
+        SetButtonsVisible(true);
     
     }
 
     public void FlipPageRight()
     {
-        if (currentPageInTab < totalPagesInTab)
-        {
-            // Hide the current page
-            HideContentForTab(currentTab, currentPageInTab);
+        if (isAnimating || currentPageInTab >= totalPagesInTab)
+            return;
+        
+        isAnimating = true;
+        SetButtonsVisible(false);
 
-            // Increment to the next page
-            currentPageInTab++;
+        // Hide the current page
+        HideContentForTab(currentTab, currentPageInTab);
 
-            // Play the page flip right animation
-            Journal.Play("pageFlipRight", 0, 0f);
+        // Increment to the next page
+        currentPageInTab++;
 
-            // Show the new page with reveal animation
-            StartCoroutine(ShowContentWithReveal(currentTab, currentPageInTab));
+        // Play the page flip right animation
+        Journal.Play("pageFlipRight", 0, 0f);
 
-            Debug.Log($"Flipped to page {currentPageInTab} of Tab {currentTab}");
-        }
-        else
-        {
-            Debug.LogWarning("Already on the last page of the tab.");
-        }
+        // Show the new page and transition back to idle animation
+        StartCoroutine(ShowContentWithIdleAnimation(currentTab, currentPageInTab));
+
+        Debug.Log($"Flipped to page {currentPageInTab} of Tab {currentTab}");
+        
     }
 
     public void FlipPageLeft()
     {
-        if (currentPageInTab > 1)
-        {
-            // Hide the current page
-            HideContentForTab(currentTab, currentPageInTab);
+        if (isAnimating || currentPageInTab <= 1)
+            return;
+        
+        isAnimating = true;
+        SetButtonsVisible(false);
 
-            // Decrement to the previous page
-            currentPageInTab--;
+        // Hide the current page
+        HideContentForTab(currentTab, currentPageInTab);
 
-            // Play the page flip left animation
-            Journal.Play("pageFlipLeft", 0, 0f);
+        // Decrement to the previous page
+        currentPageInTab--;
 
-            // Show the new page with reveal animation
-            StartCoroutine(ShowContentWithReveal(currentTab, currentPageInTab));
+        // Play the page flip left animation
+        Journal.Play("pageFlipLeft", 0, 0f);
 
-            Debug.Log($"Flipped to page {currentPageInTab} of Tab {currentTab}");
-        }
-        else
-        {
-            Debug.LogWarning("Already on the first page of the tab.");
-        }
+
+        // Show the new page and transition back to idle animation
+        StartCoroutine(ShowContentWithIdleAnimation(currentTab, currentPageInTab));
+
+        Debug.Log($"Flipped to page {currentPageInTab} of Tab {currentTab}");
+   
+    }
+
+    private IEnumerator ShowContentWithIdleAnimation(int tabNumber, int pageNumber)
+    {
+        // Wait for the page flip animation to complete
+        yield return new WaitForSeconds(0.5f);
+
+        // Show the content for the page
+        ShowContentForTab(tabNumber, pageNumber);
+
+        // Transition back to the idleOpen animation for the current tab
+        string idleAnimationName = $"idleOpen{tabNumber}";
+        Journal.Play(idleAnimationName, 0, 0f);
+
+        isAnimating = false;
+        SetButtonsVisible(true);
+        Debug.Log($"Returned to {idleAnimationName} after flipping pages.");
     }
 
     public void PlayRevealAnimation()
@@ -197,6 +234,7 @@ public class JournalTabManager : MonoBehaviour
 
         Debug.Log("Playing content reveal animation.");
     }
+
     private void ShowContentForTab(int tabNumber, int pageNumber)
     {
         // Find the specific page within the tab
@@ -204,6 +242,8 @@ public class JournalTabManager : MonoBehaviour
         if (pageContent != null)
         {
             pageContent.gameObject.SetActive(true); // Activate the page
+            PlayRevealAnimation();
+            StartCoroutine(FadeInContent(pageContent, fadeDuration)); //Fade in overcontent
 
         }
         else
@@ -217,11 +257,13 @@ public class JournalTabManager : MonoBehaviour
         // Wait for the page flip animation to complete
         yield return new WaitForSeconds(0.5f);
 
-        // Show the content
+        // Show the content 
         ShowContentForTab(tabNumber, pageNumber);
 
         // Play the content reveal animation
         PlayRevealAnimation();
+
+        isAnimating = false;
     }
 
     private void HideContentForTab(int tabNumber, int pageNumber)
@@ -263,6 +305,45 @@ public class JournalTabManager : MonoBehaviour
         {
             Debug.LogWarning($"Tab {tabNumber} not found.");
             return 0;
+        }
+    }
+
+    private IEnumerator FadeInContent(Transform pageContent, float duration)
+    {
+        // Ensure the page has a CanvasGroup
+        CanvasGroup canvasGroup = pageContent.GetComponent<CanvasGroup>();
+        if (canvasGroup == null)
+        {
+            canvasGroup = pageContent.gameObject.AddComponent<CanvasGroup>();
+        }
+
+        // Set the alpha to 0 and make sure it's invisible before activating
+        canvasGroup.alpha = 0; // Fully transparent
+        pageContent.gameObject.SetActive(true); // Activate the page
+
+        // Wait for 0.25 seconds before starting the fade-in effect
+        yield return new WaitForSeconds(0.25f);
+
+        float elapsedTime = 0f;
+
+        // Gradually increase the alpha
+        while (elapsedTime < fadeDuration)
+        {
+            canvasGroup.alpha = Mathf.Lerp(0, 1, elapsedTime / fadeDuration);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        // Ensure it is fully visible
+        canvasGroup.alpha = 1f;
+    }
+
+    private void SetButtonsVisible(bool visible)
+    {
+        // Hide or show the entire buttons container (parent GameObject)
+        if (Buttons != null)
+        {
+            Buttons.SetActive(visible);
         }
     }
 }
