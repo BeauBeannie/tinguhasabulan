@@ -4049,6 +4049,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.3
+  verticalSpeed: 0.3
 --- !u!54 &412845062632471214
 Rigidbody:
   m_ObjectHideFlags: 0
