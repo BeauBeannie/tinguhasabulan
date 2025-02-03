@@ -10,6 +10,8 @@ public class CountdownController : MonoBehaviour
     public TextMeshProUGUI countdownDisplay;
     public GameObject controllers;
     public GameObject pauseButton;
+    public GameObject timerText; //UI timer
+    public Timer gameTimer;
 
     private void Start()
     {
@@ -18,6 +20,7 @@ public class CountdownController : MonoBehaviour
         {
             pauseButton.SetActive(false);
             controllers.SetActive(false);
+            timerText.SetActive(false);
         }
 
         //Start the countdown coroutine
@@ -49,6 +52,15 @@ public class CountdownController : MonoBehaviour
         {
             controllers.SetActive(true);
             pauseButton.SetActive(true);
+            timerText.SetActive(true);
         }
+
+        //Start the timer only after the countdown finish
+        
+        if(gameTimer != null)
+        {
+            gameTimer.StartTimer();
+        }
+        
     }
 }

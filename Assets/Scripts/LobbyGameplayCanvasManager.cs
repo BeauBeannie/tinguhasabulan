@@ -9,7 +9,7 @@ public class LobbyGameplayCanvasManager : MonoBehaviour
     [SerializeField] private GameObject inGamePauseCanvas;
 
 
-    public void Start()
+    public void Awake()
     {
         //Disable lobby canvas
         if (lobbyCanvas != null)
