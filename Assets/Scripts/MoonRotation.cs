@@ -9,6 +9,7 @@ public class MoonRotation : MonoBehaviour
     void Update()
     {
         transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime);
+        transform.Rotate(Vector3.down * rotationSpeed * Time.deltaTime);
     }
 
 
