@@ -12,6 +12,10 @@ public class CountdownController : MonoBehaviour
     public GameObject pauseButton;
     public GameObject timerText; //UI timer
     public Timer gameTimer;
+    public GameObject moonCounter; //UI counter
+    public GameObject moonText; //text "Moons"
+    public MoonSpawner moonSpawner; //Reference to Moonspawner
+    
 
     private void Start()
     {
@@ -21,6 +25,8 @@ public class CountdownController : MonoBehaviour
             pauseButton.SetActive(false);
             controllers.SetActive(false);
             timerText.SetActive(false);
+            moonCounter.SetActive(false);
+            moonText.SetActive(false);
         }
 
         //Start the countdown coroutine
@@ -53,6 +59,8 @@ public class CountdownController : MonoBehaviour
             controllers.SetActive(true);
             pauseButton.SetActive(true);
             timerText.SetActive(true);
+            moonCounter.SetActive(true);
+            moonText.SetActive(true);
         }
 
         //Start the timer only after the countdown finish
@@ -60,6 +68,12 @@ public class CountdownController : MonoBehaviour
         if(gameTimer != null)
         {
             gameTimer.StartTimer();
+        }
+
+        // Spawn moons only after the countdown
+        if (moonSpawner != null)
+        {
+            moonSpawner.SpawnMoons();
         }
         
     }
