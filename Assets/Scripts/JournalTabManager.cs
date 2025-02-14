@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 [System.Serializable]
 public class PageTransition
@@ -38,6 +39,8 @@ public class JournalTabManager : MonoBehaviour
     private int currentPageInTab = 1;        // Current active page in the current tab
     private int totalPagesInTab = 1;         // Total pages in the current tab
 
+    public TMP_Text pageNumberText;             //Reference to the Page Number UI Text
+    public GameObject pageNumberUI;             //This is the page number game object (used to hide before chapter opens)
     [SerializeField] private float fadeDuration = 0.5f;   //control the fade in of the content
 
     private void Start()
@@ -55,6 +58,7 @@ public class JournalTabManager : MonoBehaviour
     private IEnumerator OpenBookAndInitialize()
     {
         SetButtonsVisible(false); // Disable buttons during initialization
+        pageNumberUI.SetActive(false); //hides the page number ui
 
         // Wait for the book-opening animation to complete
         yield return new WaitForSeconds(bookOpeningDuration);
@@ -66,6 +70,8 @@ public class JournalTabManager : MonoBehaviour
         currentPageInTab = 1;
         totalPagesInTab = GetTotalPagesInTab(currentTab);
 
+        UpdatePageNumber();
+
         // Show the content for Tab 1
         ShowContentForTab(currentTab, currentPageInTab);
 
@@ -76,6 +82,7 @@ public class JournalTabManager : MonoBehaviour
         PlayRevealAnimation();
 
         SetButtonsVisible(true); // Re-enable buttons after initialization
+        pageNumberUI.SetActive(true); //re-enable the page ui
 
         Debug.Log("Initialized on Tab 1");
     }
@@ -143,6 +150,8 @@ public class JournalTabManager : MonoBehaviour
         currentPageInTab = 1;
         totalPagesInTab = GetTotalPagesInTab(targetTab);
 
+        UpdatePageNumber(); //updates page number when switching in new tab
+
 
         // Show the content for the target tab
         ShowContentForTab(currentTab, currentPageInTab);
@@ -175,6 +184,8 @@ public class JournalTabManager : MonoBehaviour
         // Show the new page and transition back to idle animation
         StartCoroutine(ShowContentWithIdleAnimation(currentTab, currentPageInTab));
 
+        UpdatePageNumber(); //update the page number display
+
         Debug.Log($"Flipped to page {currentPageInTab} of Tab {currentTab}");
         
     }
@@ -199,6 +210,8 @@ public class JournalTabManager : MonoBehaviour
 
         // Show the new page and transition back to idle animation
         StartCoroutine(ShowContentWithIdleAnimation(currentTab, currentPageInTab));
+
+        UpdatePageNumber(); //update page number display
 
         Debug.Log($"Flipped to page {currentPageInTab} of Tab {currentTab}");
    
@@ -346,4 +359,17 @@ public class JournalTabManager : MonoBehaviour
             Buttons.SetActive(visible);
         }
     }
+
+    private void UpdatePageNumber()
+    {
+        if(pageNumberText != null)
+        {
+            pageNumberText.text = $"Page {currentPageInTab}/{totalPagesInTab}";
+        }
+        else
+        {
+            Debug.LogWarning("Page Number Text is not assigned in the inspector.");
+        }
+    }
+
 }

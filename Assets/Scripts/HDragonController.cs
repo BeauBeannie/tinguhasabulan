@@ -14,12 +14,16 @@ public class HDragonController : MonoBehaviour
     //controls the up down movement
     private Slider verticalSlider;
 
+    //Reference the stop button
+    private Button stopButton;
+
     private void OnEnable()
     {
         fixedJoystick = FindObjectOfType<FixedJoystick>();
         rigidBody = gameObject.GetComponent<Rigidbody>();
 
         verticalSlider = GameObject.Find("Slider").GetComponent<Slider>();
+        stopButton = GameObject.Find("Stopper Button").GetComponent<Button>();
 
         // Set up the slider
         verticalSlider.minValue = -1f; // Minimum value for downward movement
@@ -28,6 +32,15 @@ public class HDragonController : MonoBehaviour
 
         // Add listener to the slider for value changes
         verticalSlider.onValueChanged.AddListener(OnVerticalSliderValueChanged);
+
+        if(stopButton != null)
+        {
+            stopButton.onClick.AddListener(StopVerticalMovement);
+        }
+        else
+        {
+            Debug.LogError("Stopper Button not found!");
+        }
     }
 
 
@@ -73,6 +86,8 @@ public class HDragonController : MonoBehaviour
     private void StopVerticalMovement()
     {
         rigidBody.velocity = new Vector3(rigidBody.velocity.x, 0, rigidBody.velocity.z);
+        verticalSlider.value = 0; // Reset the slider value to 0
+        Debug.Log("Vertical movement stopped!");
     }
 
 }
