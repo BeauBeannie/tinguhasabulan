@@ -7,10 +7,10 @@ public class BackgroundMusic : MonoBehaviour
     private static BackgroundMusic backgroundMusic;
     void Awake()
     {
-        if(backgroundMusic = null)
+        if(backgroundMusic == null)
         {
             backgroundMusic = this;
-            DontDestroyOnLoad(backgroundMusic);
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
