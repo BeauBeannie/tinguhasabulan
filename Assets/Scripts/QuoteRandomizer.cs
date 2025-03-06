@@ -46,7 +46,9 @@ public class QuoteRandomizer : MonoBehaviour
 
     IEnumerator FadeInText()
     {
-        float duration = 3f; // Fade duration in seconds
+        yield return new WaitForSeconds(0.8f);
+
+        float duration = 2f; // Fade duration in seconds
         float elapsedTime = 0f;
         Color textColor = randomizedQuote.color;
 
