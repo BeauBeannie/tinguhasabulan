@@ -57,6 +57,7 @@ public class JournalTabManager : MonoBehaviour
 
     private IEnumerator OpenBookAndInitialize()
     {
+        
         SetButtonsVisible(false); // Disable buttons during initialization
         pageNumberUI.SetActive(false); //hides the page number ui
 
