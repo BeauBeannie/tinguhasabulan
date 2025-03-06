@@ -14,6 +14,7 @@ public class MoonManager : MonoBehaviour
     private int collectedMoons = 0; // How many moons collected
 
     private int currentLevel;
+    private bool isGameOver = false;
 
     private void Awake()
     {
@@ -61,6 +62,9 @@ public class MoonManager : MonoBehaviour
 
     private void LevelComplete()
     {
+        if(isGameOver) return; //stops if game over
+        isGameOver = true; //prevent multiple triggers
+
         int nextLevel = currentLevel + 1;
 
         if (nextLevel <= 6) // Ensure we don't go past Level 6
@@ -72,10 +76,25 @@ public class MoonManager : MonoBehaviour
         StartCoroutine(LoadCutsceneWithDelay());
     }
 
+    public void GameOver()
+    {
+        if(isGameOver) return; //Stop if already game over
+
+        isGameOver = true;
+        Debug.Log("Game Over! Failed to collect all moons.");
+        StartCoroutine(LoadGameOverScene());
+    }
+
     private IEnumerator LoadCutsceneWithDelay()
     {
         yield return new WaitForSeconds(0.5f); // Wait for 0.5 seconds
         Debug.Log("Level Complete!");  
         SceneManager.LoadScene("Cutscene"); // Load the cutscene
+    }
+
+    private IEnumerator LoadGameOverScene()
+    {
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene("GameOver");
     }
 }

@@ -10,15 +10,28 @@ public class Timer : MonoBehaviour
     private bool isRunning = false; // Timer is initially stopped
 
     void Update()
+{
+    if (isRunning)
     {
-        if (isRunning)
+        remainingTime -= Time.deltaTime;
+
+        if (remainingTime <= 0)
         {
-            remainingTime -= Time.deltaTime;
-            int minutes = Mathf.FloorToInt(remainingTime / 60);
-            int seconds = Mathf.FloorToInt(remainingTime % 60);
-            timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+            remainingTime = 0;
+            isRunning = false;
+            Debug.Log("Time's up! Checking if moons were collected...");
+
+            if (MoonManager.instance != null)
+            {
+                MoonManager.instance.GameOver(); // Calls Game Over when time runs out
+            }
         }
+
+        int minutes = Mathf.FloorToInt(remainingTime / 60);
+        int seconds = Mathf.FloorToInt(remainingTime % 60);
+        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
+}
 
     // Call this method to start the timer
     public void StartTimer()
