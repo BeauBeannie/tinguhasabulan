@@ -438,6 +438,7 @@ GameObject:
   - component: {fileID: 166599705}
   - component: {fileID: 166599704}
   - component: {fileID: 166599703}
+  - component: {fileID: 166599706}
   m_Layer: 5
   m_Name: Back Page Button
   m_TagString: Untagged
@@ -521,18 +522,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 436651864}
-        m_TargetAssemblyTypeName: sfxManager, Assembly-CSharp
-        m_MethodName: PlayPageFlipClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &166599704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -571,6 +560,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 166599701}
   m_CullTransparentMesh: 1
+--- !u!114 &166599706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166599701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 294fb2f26721c8d43beec78219cba9cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxType: 1
 --- !u!1 &194698357
 GameObject:
   m_ObjectHideFlags: 0
@@ -1081,6 +1083,7 @@ GameObject:
   - component: {fileID: 382047340}
   - component: {fileID: 382047339}
   - component: {fileID: 382047338}
+  - component: {fileID: 382047341}
   m_Layer: 5
   m_Name: Next Page Button
   m_TagString: Untagged
@@ -1164,18 +1167,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 436651864}
-        m_TargetAssemblyTypeName: sfxManager, Assembly-CSharp
-        m_MethodName: PlayPageFlipClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &382047339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1214,6 +1205,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 382047336}
   m_CullTransparentMesh: 1
+--- !u!114 &382047341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 382047336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 294fb2f26721c8d43beec78219cba9cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxType: 1
 --- !u!1 &411956837
 GameObject:
   m_ObjectHideFlags: 0
@@ -1227,6 +1231,7 @@ GameObject:
   - component: {fileID: 411956840}
   - component: {fileID: 411956839}
   - component: {fileID: 411956842}
+  - component: {fileID: 411956843}
   m_Layer: 5
   m_Name: Level 2
   m_TagString: Untagged
@@ -1312,7 +1317,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 436651864}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: sfxManager, Assembly-CSharp
         m_MethodName: PlayChapterFlipClick
         m_Mode: 1
@@ -1391,18 +1396,19 @@ MonoBehaviour:
   levelNumbers: {fileID: 345399662}
   levelButton: {fileID: 411956839}
   levelIndex: 2
---- !u!114 &436651864 stripped
+--- !u!114 &411956843
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8617119767212769498, guid: e163a05ed18cedd44b2ba4d227f1e937,
-    type: 3}
-  m_PrefabInstance: {fileID: 924775827}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 411956837}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65fc262293bad8c489874fe6ff13feee, type: 3}
+  m_Script: {fileID: 11500000, guid: 294fb2f26721c8d43beec78219cba9cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sfxType: 2
 --- !u!1 &473007718
 GameObject:
   m_ObjectHideFlags: 0
@@ -1754,80 +1760,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 569055892}
   m_CullTransparentMesh: 1
---- !u!1001 &577103867
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2528647597778938874, guid: 5df59416fc4baba4f9c18c7ecb9abb2d,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2528647597778938874, guid: 5df59416fc4baba4f9c18c7ecb9abb2d,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2528647597778938874, guid: 5df59416fc4baba4f9c18c7ecb9abb2d,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2528647597778938874, guid: 5df59416fc4baba4f9c18c7ecb9abb2d,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2528647597778938874, guid: 5df59416fc4baba4f9c18c7ecb9abb2d,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2528647597778938874, guid: 5df59416fc4baba4f9c18c7ecb9abb2d,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2528647597778938874, guid: 5df59416fc4baba4f9c18c7ecb9abb2d,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2528647597778938874, guid: 5df59416fc4baba4f9c18c7ecb9abb2d,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2528647597778938874, guid: 5df59416fc4baba4f9c18c7ecb9abb2d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2528647597778938874, guid: 5df59416fc4baba4f9c18c7ecb9abb2d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2528647597778938874, guid: 5df59416fc4baba4f9c18c7ecb9abb2d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2528647597778938876, guid: 5df59416fc4baba4f9c18c7ecb9abb2d,
-        type: 3}
-      propertyPath: m_Name
-      value: BackgroundMusic
-      objectReference: {fileID: 0}
-    - target: {fileID: 2528647597778938876, guid: 5df59416fc4baba4f9c18c7ecb9abb2d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5df59416fc4baba4f9c18c7ecb9abb2d, type: 3}
 --- !u!1 &581132831
 GameObject:
   m_ObjectHideFlags: 0
@@ -2234,6 +2166,7 @@ GameObject:
   - component: {fileID: 644083415}
   - component: {fileID: 644083414}
   - component: {fileID: 644083417}
+  - component: {fileID: 644083418}
   m_Layer: 5
   m_Name: Level 3
   m_TagString: Untagged
@@ -2319,7 +2252,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 436651864}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: sfxManager, Assembly-CSharp
         m_MethodName: PlayChapterFlipClick
         m_Mode: 1
@@ -2398,6 +2331,19 @@ MonoBehaviour:
   levelNumbers: {fileID: 1318918665}
   levelButton: {fileID: 644083414}
   levelIndex: 3
+--- !u!114 &644083418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 644083412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 294fb2f26721c8d43beec78219cba9cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxType: 2
 --- !u!1 &716307625
 GameObject:
   m_ObjectHideFlags: 0
@@ -2411,6 +2357,7 @@ GameObject:
   - component: {fileID: 716307628}
   - component: {fileID: 716307627}
   - component: {fileID: 716307630}
+  - component: {fileID: 716307631}
   m_Layer: 5
   m_Name: Next Button
   m_TagString: Untagged
@@ -2544,6 +2491,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb34df59a6f0b014d9762349dc2f6b0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &716307631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716307625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 294fb2f26721c8d43beec78219cba9cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxType: 0
 --- !u!1 &869492354
 GameObject:
   m_ObjectHideFlags: 0
@@ -2789,6 +2749,7 @@ GameObject:
   - component: {fileID: 920993255}
   - component: {fileID: 920993254}
   - component: {fileID: 920993257}
+  - component: {fileID: 920993258}
   m_Layer: 5
   m_Name: Level 6
   m_TagString: Untagged
@@ -2874,7 +2835,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 436651864}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: sfxManager, Assembly-CSharp
         m_MethodName: PlayChapterFlipClick
         m_Mode: 1
@@ -2953,80 +2914,19 @@ MonoBehaviour:
   levelNumbers: {fileID: 1963969550}
   levelButton: {fileID: 920993254}
   levelIndex: 6
---- !u!1001 &924775827
-PrefabInstance:
+--- !u!114 &920993258
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8617119767212769499, guid: e163a05ed18cedd44b2ba4d227f1e937,
-        type: 3}
-      propertyPath: m_Name
-      value: sfxManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 8617119767212769499, guid: e163a05ed18cedd44b2ba4d227f1e937,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8617119767212769501, guid: e163a05ed18cedd44b2ba4d227f1e937,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8617119767212769501, guid: e163a05ed18cedd44b2ba4d227f1e937,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1088.2545
-      objectReference: {fileID: 0}
-    - target: {fileID: 8617119767212769501, guid: e163a05ed18cedd44b2ba4d227f1e937,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 220.77673
-      objectReference: {fileID: 0}
-    - target: {fileID: 8617119767212769501, guid: e163a05ed18cedd44b2ba4d227f1e937,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -21.316383
-      objectReference: {fileID: 0}
-    - target: {fileID: 8617119767212769501, guid: e163a05ed18cedd44b2ba4d227f1e937,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8617119767212769501, guid: e163a05ed18cedd44b2ba4d227f1e937,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8617119767212769501, guid: e163a05ed18cedd44b2ba4d227f1e937,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8617119767212769501, guid: e163a05ed18cedd44b2ba4d227f1e937,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8617119767212769501, guid: e163a05ed18cedd44b2ba4d227f1e937,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8617119767212769501, guid: e163a05ed18cedd44b2ba4d227f1e937,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8617119767212769501, guid: e163a05ed18cedd44b2ba4d227f1e937,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e163a05ed18cedd44b2ba4d227f1e937, type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920993252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 294fb2f26721c8d43beec78219cba9cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxType: 2
 --- !u!1 &1065374773
 GameObject:
   m_ObjectHideFlags: 0
@@ -3328,6 +3228,7 @@ GameObject:
   - component: {fileID: 1102817369}
   - component: {fileID: 1102817368}
   - component: {fileID: 1102817371}
+  - component: {fileID: 1102817372}
   m_Layer: 5
   m_Name: Level 4
   m_TagString: Untagged
@@ -3413,7 +3314,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 436651864}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: sfxManager, Assembly-CSharp
         m_MethodName: PlayChapterFlipClick
         m_Mode: 1
@@ -3492,6 +3393,19 @@ MonoBehaviour:
   levelNumbers: {fileID: 1580115052}
   levelButton: {fileID: 1102817368}
   levelIndex: 4
+--- !u!114 &1102817372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102817366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 294fb2f26721c8d43beec78219cba9cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxType: 2
 --- !u!1 &1238716224
 GameObject:
   m_ObjectHideFlags: 0
@@ -3543,6 +3457,7 @@ GameObject:
   - component: {fileID: 1300005189}
   - component: {fileID: 1300005188}
   - component: {fileID: 1300005191}
+  - component: {fileID: 1300005192}
   m_Layer: 5
   m_Name: Level 1
   m_TagString: Untagged
@@ -3629,7 +3544,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 436651864}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: sfxManager, Assembly-CSharp
         m_MethodName: PlayChapterFlipClick
         m_Mode: 1
@@ -3708,6 +3623,19 @@ MonoBehaviour:
   levelNumbers: {fileID: 1068358465}
   levelButton: {fileID: 1300005188}
   levelIndex: 1
+--- !u!114 &1300005192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300005186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 294fb2f26721c8d43beec78219cba9cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxType: 2
 --- !u!1 &1313436839
 GameObject:
   m_ObjectHideFlags: 0
@@ -3721,6 +3649,7 @@ GameObject:
   - component: {fileID: 1313436842}
   - component: {fileID: 1313436841}
   - component: {fileID: 1313436844}
+  - component: {fileID: 1313436845}
   m_Layer: 5
   m_Name: Back Button
   m_TagString: Untagged
@@ -3854,6 +3783,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ce62c5130e572f48894b12faec466aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1313436845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313436839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 294fb2f26721c8d43beec78219cba9cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxType: 0
 --- !u!1 &1318918663
 GameObject:
   m_ObjectHideFlags: 0
@@ -4003,6 +3945,7 @@ GameObject:
   - component: {fileID: 1430945126}
   - component: {fileID: 1430945125}
   - component: {fileID: 1430945128}
+  - component: {fileID: 1430945129}
   m_Layer: 5
   m_Name: Level 5
   m_TagString: Untagged
@@ -4088,7 +4031,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 436651864}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: sfxManager, Assembly-CSharp
         m_MethodName: PlayChapterFlipClick
         m_Mode: 1
@@ -4167,6 +4110,19 @@ MonoBehaviour:
   levelNumbers: {fileID: 581132833}
   levelButton: {fileID: 1430945125}
   levelIndex: 5
+--- !u!114 &1430945129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430945123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 294fb2f26721c8d43beec78219cba9cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxType: 2
 --- !u!1 &1437639864
 GameObject:
   m_ObjectHideFlags: 0
