@@ -13,7 +13,7 @@ public class sfxButtonBinder : MonoBehaviour
     private void Awake()
     {
         Button button = GetComponent<Button>();
-        if (button != null && sfxManager.instance != null)
+        if (button != null && SFXManager.instance != null)
         {
             button.onClick.AddListener(PlaySFX);
         }
@@ -24,13 +24,13 @@ public class sfxButtonBinder : MonoBehaviour
         switch (sfxType)
         {
             case SFXType.ButtonClick:
-                sfxManager.instance.PlayButtonClick();
+                SFXManager.instance.PlayButtonClick();
                 break;
             case SFXType.PageFlip:
-                sfxManager.instance.PlayPageFlipClick();
+                SFXManager.instance.PlayPageFlipClick();
                 break;
             case SFXType.ChapterFlip:
-                sfxManager.instance.PlayChapterFlipClick();
+                SFXManager.instance.PlayChapterFlipClick();
                 break;
         }
     }
