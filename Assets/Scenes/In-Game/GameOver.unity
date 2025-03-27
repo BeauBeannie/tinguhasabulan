@@ -743,6 +743,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   randomizedQuote: {fileID: 1213461219}
+  quotes:
+  - '"The moon still waits for me, just as I wait for the right moment to rise again."'
+  - '"One night, when the world is still and the ocean calm, I will rise again."'
+  - '"The tides will bring me back."'
+  - '"We will meet again."'
+  - '"The sky still calls my name."'
+  - '"Drifted away, but never lost."'
+  - "\"The tides will carry me back to where I belong\u2014beside the moon, beneath
+    the stars.\""
+  - '"Some journeys take longer than others, but the path always leads back to you."'
+  - '"The night is patient. So am I. The story is not over."'
+  - '"Even the waves must wait."'
+  - '"Some light is meant to be chased, and some bonds are never truly broken."'
+  - '"I am meant to return, and when I do, the sky will open for me once more."'
+  - '"The moonlight still reaches me, even beneath the waves. It has not forgotten
+    me, and I have not forgotten it."'
 --- !u!1 &1699362638
 GameObject:
   m_ObjectHideFlags: 0
