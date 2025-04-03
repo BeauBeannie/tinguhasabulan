@@ -749,6 +749,7 @@ GameObject:
   - component: {fileID: 1789659623}
   - component: {fileID: 1789659622}
   - component: {fileID: 1789659625}
+  - component: {fileID: 1789659626}
   m_Layer: 5
   m_Name: Back to Journal
   m_TagString: Untagged
@@ -882,6 +883,19 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &1789659626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789659620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 294fb2f26721c8d43beec78219cba9cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxType: 0
 --- !u!1 &1915253187
 GameObject:
   m_ObjectHideFlags: 0

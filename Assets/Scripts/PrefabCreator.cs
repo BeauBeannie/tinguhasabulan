@@ -29,7 +29,7 @@ public class PrefabCreator : MonoBehaviour
             if (dragon == null) // Prevent multiple dragons from spawning
             {
                 dragon = Instantiate(dragonPrefab, image.transform);
-                dragon.transform.position += prefabOffset;
+                dragon.transform.localPosition += prefabOffset;
 
                 // Assign UI controls to the dragon
                 HDragonController dragonController = dragon.GetComponent<HDragonController>();
@@ -42,6 +42,17 @@ public class PrefabCreator : MonoBehaviour
                     Debug.LogError("HDragonController not found on dragon prefab!");
                 }
             }
+        }
+    }
+
+    private void OnDisable()
+    {
+        aRTrackedImageManager.trackedImagesChanged -= OnImageChanged;
+
+        if (dragon != null)
+        {
+            Destroy(dragon); // Remove the existing dragon before switching levels
+            dragon = null;  // Ensure it can spawn in the next level
         }
     }
 }
