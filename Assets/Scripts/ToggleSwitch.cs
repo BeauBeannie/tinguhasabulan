@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ToggleSwitch : MonoBehaviour {
+public class ToggleSwitch : MonoBehaviour
+{
 
     public AudioSource bgMusic; //bg music audiosource
     public AudioSource sfxSource; //sfx audio source
@@ -11,7 +12,8 @@ public class ToggleSwitch : MonoBehaviour {
     private bool musicMuted = false;
     private bool sfxMuted = false;
 
-    public void OnChangeValue() {
+    public void OnChangeValue()
+    {
         bool onoffSwitch = gameObject.GetComponent<Toggle>().isOn;
         if (onoffSwitch)
         {
@@ -28,14 +30,14 @@ public class ToggleSwitch : MonoBehaviour {
 
     void Start()
     {
-        if(!PlayerPrefs.HasKey("musicMuted"))
+        if (!PlayerPrefs.HasKey("musicMuted"))
         {
             PlayerPrefs.SetInt("musicMuted", 0);
         }
-        
-        if(!PlayerPrefs.HasKey("sfxMuted"))
+
+        if (!PlayerPrefs.HasKey("sfxMuted"))
         {
-            PlayerPrefs.SetInt("sfxMuted",0);
+            PlayerPrefs.SetInt("sfxMuted", 0);
         }
 
         Load();
