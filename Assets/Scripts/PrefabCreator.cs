@@ -47,12 +47,41 @@ public class PrefabCreator : MonoBehaviour
 
     private void OnDisable()
     {
-        aRTrackedImageManager.trackedImagesChanged -= OnImageChanged;
+        if (aRTrackedImageManager != null) // ✅ Prevent errors if null
+        {
+            aRTrackedImageManager.trackedImagesChanged -= OnImageChanged;
+        }
 
         if (dragon != null)
         {
-            Destroy(dragon); // Remove the existing dragon before switching levels
-            dragon = null;  // Ensure it can spawn in the next level
+            Destroy(dragon);
+            dragon = null;
+        }
+
+        // ✅ Ensure AR properly resets when transitioning levels
+        StartCoroutine(ResetARTracking());
+    }
+
+    private IEnumerator ResetARTracking()
+    {
+        if (aRTrackedImageManager != null) // ✅ Prevent errors
+        {
+            aRTrackedImageManager.enabled = false;
+        }
+
+        yield return new WaitForSeconds(0.5f); // Short delay to ensure proper reset
+
+        if (aRTrackedImageManager != null)
+        {
+            aRTrackedImageManager.enabled = true;
+        }
+
+        // ✅ Destroy the dragon in case tracking reset fails
+        if (dragon != null)
+        {
+            Destroy(dragon);
+            dragon = null;
         }
     }
+
 }

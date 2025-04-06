@@ -4679,6 +4679,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moonText: {fileID: 44702132}
   totalMoons: 3
+  arSession: {fileID: 1200361784}
 --- !u!1 &1535538207
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,17 +4,20 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.XR.ARFoundation; //import ARFoundation 
 
 public class MoonManager : MonoBehaviour
 {
     public static MoonManager instance;
-    
+
     [SerializeField] public TextMeshProUGUI moonText; // UI text for collected moons
     [SerializeField] public int totalMoons; // Total moons in the current level
     private int collectedMoons = 0; // How many moons collected
 
     private int currentLevel;
     private bool isGameOver = false;
+
+    public ARSession arSession; //Reference to ARSession
 
     private void Awake()
     {
@@ -62,7 +65,7 @@ public class MoonManager : MonoBehaviour
 
     private void LevelComplete()
     {
-        if(isGameOver) return; //stops if game over
+        if (isGameOver) return; //stops if game over
         isGameOver = true; //prevent multiple triggers
 
         int nextLevel = currentLevel + 1;
@@ -78,7 +81,7 @@ public class MoonManager : MonoBehaviour
 
     public void GameOver()
     {
-        if(isGameOver) return; //Stop if already game over
+        if (isGameOver) return; //Stop if already game over
 
         isGameOver = true;
         Debug.Log("Game Over! Failed to collect all moons.");
@@ -87,14 +90,28 @@ public class MoonManager : MonoBehaviour
 
     private IEnumerator LoadCutsceneWithDelay()
     {
-        yield return new WaitForSeconds(0.5f); // Wait for 0.5 seconds
-        Debug.Log("Level Complete!");  
+        yield return new WaitForSeconds(1f); // Wait for 0.5 seconds
+
+        if (arSession != null)
+        {
+            Debug.Log("Resetting AR Session...");
+            arSession.Reset(); // Reset AR tracking to refresh image recognition
+        }
+
+        Debug.Log("Level Complete!");
         SceneManager.LoadScene("Cutscene"); // Load the cutscene
     }
 
     private IEnumerator LoadGameOverScene()
     {
         yield return new WaitForSeconds(1f);
+
+        if (arSession != null)
+        {
+            Debug.Log("Resetting AR Session...");
+            arSession.Reset(); // Reset AR tracking before game over scene
+        }
+
         SceneManager.LoadScene("GameOver");
     }
 }
