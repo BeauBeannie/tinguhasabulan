@@ -3300,7 +3300,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 631654494}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 869492360}
+        m_TargetAssemblyTypeName: SceneManagerScript, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: BakunawaLoreScene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &631654494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4743,6 +4755,7 @@ GameObject:
   - component: {fileID: 869492356}
   - component: {fileID: 869492355}
   - component: {fileID: 869492359}
+  - component: {fileID: 869492360}
   m_Layer: 5
   m_Name: Journal Canvas
   m_TagString: Untagged
@@ -4849,6 +4862,18 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 869492354}
   m_Enabled: 1
+--- !u!114 &869492360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869492354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ce62c5130e572f48894b12faec466aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &889594171
 GameObject:
   m_ObjectHideFlags: 0
