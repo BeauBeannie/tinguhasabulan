@@ -607,7 +607,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 143295943}
-  remainingTime: 60
+  remainingTime: 65
 --- !u!114 &143295943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4700,8 +4700,8 @@ MonoBehaviour:
   moonPrefab: {fileID: 3249778396558863312, guid: 7c56b047fd67b744897fc93e1e75e1dd,
     type: 3}
   moonCount: 7
-  spawnInterval: 3.5
-  spawnArea: {x: 0.5, y: 0.5, z: 0.5}
+  spawnInterval: 3
+  spawnArea: {x: 0.5, y: 0.5, z: 1}
 --- !u!4 &1529239850
 Transform:
   m_ObjectHideFlags: 0

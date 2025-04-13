@@ -1159,7 +1159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 143295943}
-  remainingTime: 50
+  remainingTime: 75
 --- !u!114 &143295943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4584,7 +4584,7 @@ MonoBehaviour:
     type: 3}
   moonCount: 9
   spawnInterval: 3
-  spawnArea: {x: 0.5, y: 0.5, z: 0.5}
+  spawnArea: {x: 1.5, y: 0.5, z: 1}
 --- !u!4 &1529239850
 Transform:
   m_ObjectHideFlags: 0
