@@ -3,7 +3,7 @@
   <img src="https://github.com/BeauBeannie/tinguhasabulan/blob/main/readmeResources/spawn13.png" style="vertical-align: left">
 </h1>
 
-## ![Meow Knight](Siomeow%20Legends/Assets/GIFs/Meow_Knight_Idle.gif) Table of Contents
+## 📜Table of Contents
 - [ Table of Contents](#-table-of-contents)
 - [ Introduction](#-introduction)
 - [ Installation](#-installation)
@@ -12,7 +12,7 @@
 ---
 <!-- ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png) -->
 
-## ![Meowtar The Blue](Siomeow%20Legends/Assets/GIFs/Meowtar_The_Blue_Idle.gif) Introduction
+## 🌕 Introduction
 
 What if the moon was not just a moon, but a being bound by duty—one moon, carrying the weight every night? There was never an enemy, only two souls who found in each other what they had longed for—a friend. Yet, the moon must shine for the people, while the Bakunawa, drawn to him, unknowingly brings harm each time it rises from the sea to take the moon away. Separated by fate, they exist in different worlds. Will they always yearn for each other, forever admiring from afar?
 
@@ -30,7 +30,7 @@ The game mixes 2D art and real-world interaction, where players engage with obje
 
 <!-- ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png) -->
 
-## ![King Mewrthur](Siomeow%20Legends/Assets/GIFs/King_Mewrthur_Idle.gif) Installation
+## 🐲 Installation
 
 > ‼️ **NOTE**: The game is currently available only on Android devices with screen sizes closer to 2340 x 1080.
 
@@ -41,8 +41,7 @@ Follow these steps to install **Tinguha sa Bulan**:
 Follow these steps to install **Tinguha sa Bulan**:
 
 1. **Download the Game**  
-   Visit the [latest release](https://github.com/BeauBeannie/tinguhasabulan/releases/tag/v1.0.0) and download the APK file.  
-   Or use this [direct link](https://github.com/BeauBeannie/tinguhasabulan/releases/download/v1.0.0/TsB.apk) to download the game directly.
+   Visit the [latest release](https://github.com/BeauBeannie/tinguhasabulan/releases/tag/v1.0.0) and download the APK file or use this [direct link](https://github.com/BeauBeannie/tinguhasabulan/releases/download/v1.0.0/TsB.apk) to download the game directly.
 
 2. **Install the Game on Android**  
    Locate the downloaded `.apk` file on your Android device and tap it to install. You may need to allow app installations from unknown sources.
@@ -56,7 +55,7 @@ Follow these steps to install **Tinguha sa Bulan**:
 
 <!-- ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png) -->
 
-## ![Meowalas](Siomeow%20Legends/Assets/GIFs/Meowalas_Idle.gif) How To Start the Game
+## 🎮🌕🐲 How To Start the Game
 
 Follow these steps to launch and play **Tinguha sa Bulan**:
 
@@ -122,7 +121,7 @@ Follow these steps to launch and play **Tinguha sa Bulan**:
 
     ![Next Level Unlocked](https://github.com/BeauBeannie/tinguhasabulan/blob/main/readmeResources/spawn10.png)
   
-  **🐉 Only the most persistent will uncover the full legend of the Bakunawa.**
+  **🐉 Only the most persistent will uncover the full legend of the Bakunawa. 🌕**
 
   
 <!-- ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png) -->
