@@ -1,6 +1,6 @@
 <a id="readme-top"></a>
 <h1 align="center">
-  <img src="Siomeow%20Legends/Assets/UI/Readme%20Essentials/Cover-Photo.png" style="vertical-align: left">
+  <img src="readmeResources/Screenshot 2025-04-13 153653.png" style="vertical-align: left">
 </h1>
 
 ## ![Meow Knight](Siomeow%20Legends/Assets/GIFs/Meow_Knight_Idle.gif) Table of Contents
@@ -14,23 +14,30 @@
 
 ## ![Meowtar The Blue](Siomeow%20Legends/Assets/GIFs/Meowtar_The_Blue_Idle.gif) Introduction
 
-In a world where cats of all types—mages, swordsmen, knights, and rogues—are captured and forced into a brutal arena,  only the deadliest can claim victory. These skilled cats must rely on their unique abilities and ruthless instincts to eliminate every rival standing in their way. Each battle is a savage fight for dominance, and only the fiercest feline will emerge victorious, while the rest are doomed to a grim fate: being turned into siomeow.
+What if the moon was not just a moon, but a being bound by duty—one moon, carrying the weight every night? There was never an enemy, only two souls who found in each other what they had longed for—a friend. Yet, the moon must shine for the people, while the Bakunawa, drawn to him, unknowingly brings harm each time it rises from the sea to take the moon away. Separated by fate, they exist in different worlds. Will they always yearn for each other, forever admiring from afar?
 
-Siomeow Legends is a top-down, free-for-all deathmatch game where survival isn’t enough—players must dominate the battlefield by defeating as many opponents as possible to secure the top spot. Set in randomized arenas filled with hidden dangers and cunning traps, players control fierce feline champions, fighting tooth and claw to rack up kills and climb the leaderboard.
+Tinguha sa Bulan, depending on the English translation, carries two meanings—Desire of the Moon and Desire for the Moon. In this retelling, why not both?
 
-Embracing our love for cats, we feature feline adventurers as the main characters, each embodying agility, curiosity, and charm. This blend of player-versus-player dynamics with cat personas creates a unique game that’s both thrilling and whimsically engaging.
+* Desire of the Moon: The moon longs to be with its dear friend, the Bakunawa, to escape the burden of being the light for everyone.
 
----
+* Desire for the Moon: The Bakunawa yearns for the day the moon can join it in the depths, away from duty, simply to be together again.
+
+They do not seek to harm, only to be with one another. They just wanted each other to be happy.
+
+**Tinguha sa Bulan** is a short AR (Augmented Reality) game that reimagines the traditional Visayan legend of the Bakunawa and the Seven Moons. This project explores how technology—specifically AR—can serve as a bridge between oral tradition and modern digital storytelling.
+
+The game mixes 2D pixel art and real-world interaction, where players engage with objects around them to piece together the narrative and relive the longing between the moon and the Bakunawa.
+
 <!-- ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png) -->
 
 ## ![King Mewrthur](Siomeow%20Legends/Assets/GIFs/King_Mewrthur_Idle.gif) Installation
 
-> ‼️ **NOTE**: The game is currently available only on Windows.
+> ‼️ **NOTE**: The game is currently available only on Android devices with screen sizes closer to 2340 x 1080.
 
-Follow these steps to install **Siomeow Legends**:
+Follow these steps to install **Tinguha sa Bulan**:
 
 1. **Download the Game**  
-   Visit the [latest release](https://github.com/your-username/siomeow-legends/releases) and download the zip file. Alternatively, you can use this [direct link](https://github.com/Mekuuuuu/siomeow-legends/releases/download/v1.0.0/Siomeow-Legends-v1.0.0-alpha.zip) to download the game directly.
+   Visit the [latest release](https://github.com/BeauBeannie/tinguhasabulan) and download the zip file. Alternatively, you can use this [direct link](https://github.com/Mekuuuuu/siomeow-legends/releases/download/v1.0.0/Siomeow-Legends-v1.0.0-alpha.zip) to download the game directly.
 2. **Extract the Files**  
    After downloading, locate the zip file and extract its contents into a folder of your choice.
 3. **Run the Game**  
@@ -41,7 +48,7 @@ Follow these steps to install **Siomeow Legends**:
 ---
 <!-- ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png) -->
 
-## ![Meowalas](Siomeow%20Legends/Assets/GIFs/Meowalas_Idle.gif) How To Start A Game
+## ![Meowalas](Siomeow%20Legends/Assets/GIFs/Meowalas_Idle.gif) How To Start the Game
 
 Follow these steps to launch and play **Siomeow Legends**:
 
