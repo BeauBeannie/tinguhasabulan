@@ -36,10 +36,6 @@ The game mixes 2D art and real-world interaction, where players engage with obje
 
 Follow these steps to install **Tinguha sa Bulan**:
 
-‼️ **NOTE**: The game is currently available only on Android devices with screen sizes closer to 2340 x 1080.
-
-Follow these steps to install **Tinguha sa Bulan**:
-
 1. **Download the Game**  
    Visit the [latest release](https://github.com/BeauBeannie/tinguhasabulan/releases/tag/v1.0.0) and download the APK file or use this [direct link](https://github.com/BeauBeannie/tinguhasabulan/releases/download/v1.0.0/TsB.apk) to download the game directly.
 
