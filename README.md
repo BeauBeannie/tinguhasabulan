@@ -7,7 +7,7 @@
 - [ Table of Contents](#-table-of-contents)
 - [ Introduction](#-introduction)
 - [ Installation](#-installation)
-- [ How To Start A Game](#-how-to-start-the-game)
+- [How To Start the Game](#how-to-start-the-game)
 
 ---
 <!-- ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png) -->
