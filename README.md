@@ -42,7 +42,7 @@ Follow these steps to install **Tinguha sa Bulan**:
 
 1. **Download the Game**  
    Visit the [latest release](https://github.com/BeauBeannie/tinguhasabulan/releases/tag/v1.0.0) and download the APK file.  
-   Or use this [direct link](https://github.com/BeauBeannie/tinguhasabulan/releases/download/v1.0.0/TinguhaSaBulan.apk) to download the game directly.
+   Or use this [direct link](https://github.com/BeauBeannie/tinguhasabulan/releases/download/v1.0.0/TsB.apk) to download the game directly.
 
 2. **Install the Game on Android**  
    Locate the downloaded `.apk` file on your Android device and tap it to install. You may need to allow app installations from unknown sources.
