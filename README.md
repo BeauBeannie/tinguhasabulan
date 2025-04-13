@@ -36,16 +36,24 @@ The game mixes 2D art and real-world interaction, where players engage with obje
 
 Follow these steps to install **Tinguha sa Bulan**:
 
-1. **Download the Game**  
-   Visit the [latest release](https://github.com/BeauBeannie/tinguhasabulan) and download the zip file. Alternatively, you can use this [direct link](https://github.com/Mekuuuuu/siomeow-legends/releases/download/v1.0.0/Siomeow-Legends-v1.0.0-alpha.zip) to download the game directly.
-2. **Extract the Files**  
-   After downloading, locate the zip file and extract its contents into a folder of your choice.
-3. **Run the Game**  
-   Open the extracted folder and double-click on **`Siomeow Legends.exe`** to start playing.
-4. **Security Warnings (If Any)**  
-   If your computer blocks the game or displays a warning, don’t worry—it’s just because we don’t have a developer certificate yet, which some systems use to verify apps. To proceed, look for a `More Info` option in the warning prompt and then select `Run Anyway`. Rest assured, **Siomeow Legends is completely safe**.
+‼️ **NOTE**: The game is currently available only on Android devices with screen sizes closer to 2340 x 1080.
 
----
+Follow these steps to install **Tinguha sa Bulan**:
+
+1. **Download the Game**  
+   Visit the [latest release](https://github.com/BeauBeannie/tinguhasabulan/releases/tag/v1.0.0) and download the APK file.  
+   Or use this [direct link](https://github.com/BeauBeannie/tinguhasabulan/releases/download/v1.0.0/TinguhaSaBulan.apk) to download the game directly.
+
+2. **Install the Game on Android**  
+   Locate the downloaded `.apk` file on your Android device and tap it to install. You may need to allow app installations from unknown sources.
+
+3. **Launch the Game**  
+   After installing, tap the **Tinguha sa Bulan** icon to start your adventure!
+
+4. **Security Warnings (If Any)**  
+   If your phone blocks the game or displays a warning, don’t worry—it’s just because we don’t have a developer certificate yet, which some systems use to verify apps. To proceed, look for a `More Info` option in the warning prompt and then select `Install Anyway`. Rest assured, **Tinguha sa Bulan is completely safe**.
+
+
 <!-- ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png) -->
 
 ## ![Meowalas](Siomeow%20Legends/Assets/GIFs/Meowalas_Idle.gif) How To Start the Game
