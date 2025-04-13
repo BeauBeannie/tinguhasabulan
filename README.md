@@ -1,6 +1,6 @@
 <a id="readme-top"></a>
 <h1 align="center">
-  <img src="readmeResources/Screenshot 2025-04-13 153653.png" style="vertical-align: left">
+  <img src="https://github.com/BeauBeannie/tinguhasabulan/blob/main/readmeResources/spawn13.png" style="vertical-align: left">
 </h1>
 
 ## ![Meow Knight](Siomeow%20Legends/Assets/GIFs/Meow_Knight_Idle.gif) Table of Contents
@@ -50,76 +50,71 @@ Follow these steps to install **Tinguha sa Bulan**:
 
 ## ![Meowalas](Siomeow%20Legends/Assets/GIFs/Meowalas_Idle.gif) How To Start the Game
 
-Follow these steps to launch and play **Siomeow Legends**:
+Follow these steps to launch and play **Tinguha sa Bulan**:
 
 1. **Start Game** 
    Open the installed application, and you’ll be greeted by the main menu screen. Click the `Start` button to begin.
    
-   ![Main Menu Start](Siomeow%20Legends/Assets/UI/Readme%20Essentials/Main-Menu-Start.png)
+   ![Main Menu Start](https://github.com/BeauBeannie/tinguhasabulan/blob/main/readmeResources/spawn12.png)
 
-2. **Choose Your Battle Mode**
-   A pop-up will appear, prompting you to input your name and choose a battle mode.
-   Select `LAN` to play with your friends locally on the same network.
+2. **Chapter Journal Appears**
+   You’ll be taken to the Journal, where Chapter 1 is unlocked by default.
+   Click the `Next icon` button located at the lower-right corner of the screen.
+   ![Click Next Button](https://github.com/BeauBeannie/tinguhasabulan/blob/main/readmeResources/spawn14.png)
 
-   ![Choose Battle Lan](Siomeow%20Legends/Assets/UI/Readme%20Essentials/Choose-Battle-Lan.png)
+3. **Enter the Lobby**
+   Here, use your device to scan a valid image marker — this will spawn the Bakunawa into the AR space.
 
-   Otherwise, select `Multiplayer` to play with your friends online.
+   - **Scan the Marker**:  
+     Scan the following image below either from a different device or print the image. 
 
-   ![Choose Battle Multiplayer](Siomeow%20Legends/Assets/UI/Readme%20Essentials/Choose-Battle-Multiplayer.png)
+    ![Image Marker](https://github.com/BeauBeannie/tinguhasabulan/blob/main/readmeResources/spawn11.png)
 
-3. **LAN Mode**
-   After choosing LAN, you’ll see two options:  
+     Once the Bakunawa is visible and you're ready, press the `Play` button.
 
-   - **Host Lobby in LAN**:  
-     Click `Create Battle` to host the game. 
+   ![Hosted Lobby Lan](https://github.com/BeauBeannie/tinguhasabulan/blob/main/readmeResources/spawn5.jpg)
 
-    ![Host Lobby Lan](Siomeow%20Legends/Assets/UI/Readme%20Essentials/Create-Lobby-Lan.png)
+   > ‼️ **NOTE**:
+   > 1. If the Bakunawa did not spawn, try stepping further back and look for it in real space (move the POV around).
+   > 2. Rescan the image and look for the Bakunawa again.
+   > 3. If it still won't spawn, kindly exit the game, close it, and start again.
 
-     You’ll be redirected to a lobby where you’ll see a server code. This code is the host's IP address. Share this code with other players who want to join.
+4. **Gameplay Overview**
+   During gameplay, the following UI elements will appear at the top of the screen:
 
-    ![Hosted Lobby Lan](Siomeow%20Legends/Assets/UI/Readme%20Essentials/Created-Lobby-Lan.png)
-
-   - **Join Lobby in LAN**:  
-     Enter the server code provided by the host into the input field, then click `Join Battle` to connect.  
-
-    ![Join Lobby Lan](Siomeow%20Legends/Assets/UI/Readme%20Essentials/Join-Lobby-Lan.png)
-
-4. **Multiplayer Mode**
-   After choosing Multiplayer, you’ll see two options:  
-
-   - **Host Lobby in Multiplayer**:  
-     Click `Create Lobby` to host the game. 
-
-   ![Host Lobby Multiplayer](Siomeow%20Legends/Assets/UI/Readme%20Essentials/Create-Lobby-Multiplayer.png)
-
-     You’ll be redirected to a lobby where you’ll see a server code. Share this code with other players who want to join. In multiplayer mode, your lobby is also visible online, allowing players from anywhere to join.
-
-   ![Hosted Lobby Multiplayer](Siomeow%20Legends/Assets/UI/Readme%20Essentials/Created-Lobby-Multiplayer.png)
-
-   - **Join Lobby in Multiplayer**:
-     In multiplayer mode, there are two ways to join a lobby:
-     - Enter the server code provided by the host into the input field, then click `Join` to connect.
-       
-    ![Join Lobby Multiplayer Code](Siomeow%20Legends/Assets/UI/Readme%20Essentials/Join-Lobby-Multiplayer-Code.png)
-     
-     - View a list of active lobbies online. Select a lobby from the list and click `Join` to connect.
-       
-     ![Join Lobby Multiplayer List](Siomeow%20Legends/Assets/UI/Readme%20Essentials/Join-Lobby-Multiplayer-List.png)
+  🌕 Moon Counter – Track how many moons you need to collect.
   
-   
-5. **Select A Character**
-   Once in the lobby, click on a character to select it, then click `Lock`. Characters that are already chosen by other players will have an X-mark, indicating they are unavailable.  
+  ⏱️ Timer – Shows how much time is left.
+  
+  ⏸️ Pause Button – Tap to pause the game.
 
-   ![Joined Lobby](Siomeow%20Legends/Assets/UI/Readme%20Essentials/Joined-Lobby.png)
+  Use the on-screen controls to guide the Bakunawa through the skies:
 
-6. **Start the Battle**
-   When all players have locked in their characters, the host can click the `Start` button to begin the game.  
+  🕹️ Horizontal Joystick (left) — Move the Bakunawa left or right.
+  
+  🎚️ Vertical Controller (right) — Move up or down.
+  
+  🛑 Stop Button — Instantly stop vertical movement.
 
-   ![Host Start Game](Siomeow%20Legends/Assets/UI/Readme%20Essentials/Host-Start-Game.png)
+> Tip: Placing the vertical controller's joystick in the middle will also stop vertical movement, just like the stop button.
 
-   **Prepare for an epic battle-to-the-death!  May the fiercest feline emerge victorious.**
+   ![Gameplay](https://github.com/BeauBeannie/tinguhasabulan/blob/main/readmeResources/spawn.jpg)
 
----
+5. Finish & Unlock New Chapters
+  Once you’ve collected all moons, a cutscene will play.
+
+    [Hosted Lobby Multiplayer](https://github.com/BeauBeannie/tinguhasabulan/blob/main/readmeResources/spawn8.jpg)
+
+  After the scene, click the Return to Journal button.
+
+  [Hosted Lobby Multiplayer](https://github.com/BeauBeannie/tinguhasabulan/blob/main/readmeResources/spawn7.jpg)
+  
+  This will unlock the next chapter.
+  Repeat the gameplay, unlocking new chapters, until you reach the final level.
+  
+  ** 🐉 Only the most persistent will uncover the full legend of the Bakunawa. **
+
+  
 <!-- ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png) -->
 
 <p align="right"><a href="#readme-top">Back to top</a></p>
