@@ -103,14 +103,16 @@ Follow these steps to launch and play **Tinguha sa Bulan**:
 5. Finish & Unlock New Chapters  
   Once you’ve collected all moons, a cutscene will play.
 
-    [Hosted Lobby Multiplayer](https://github.com/BeauBeannie/tinguhasabulan/blob/main/readmeResources/spawn8.jpg)
+    ![Cutscene](https://github.com/BeauBeannie/tinguhasabulan/blob/main/readmeResources/spawn8.jpg)
 
     After the scene, click the Return to Journal button.
   
-    [Hosted Lobby Multiplayer](https://github.com/BeauBeannie/tinguhasabulan/blob/main/readmeResources/spawn7.jpg)
+    ![Return to Journal](https://github.com/BeauBeannie/tinguhasabulan/blob/main/readmeResources/spawn7.jpg)
     
     This will unlock the next chapter.
     Repeat the gameplay, unlocking new chapters, until you reach the final level.
+
+    ![Next Level Unlocked](https://github.com/BeauBeannie/tinguhasabulan/blob/main/readmeResources/spawn10.png)
   
   **🐉 Only the most persistent will uncover the full legend of the Bakunawa.**
 
