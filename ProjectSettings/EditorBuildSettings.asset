@@ -44,6 +44,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/In-Game/GameOver.unity
     guid: c9d692ebc10255d4e86339aab7a916a6
+  - enabled: 1
+    path: Assets/Scenes/In-Game/BakunawaLoreScene.unity
+    guid: 5a5eda33eea3d1446b1947b8fed26e24
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 744b813df90924c169af73489b8325de,
       type: 2}
