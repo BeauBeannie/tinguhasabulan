@@ -52,67 +52,67 @@ Follow these steps to install **Tinguha sa Bulan**:
 
 Follow these steps to launch and play **Tinguha sa Bulan**:
 
-1. **Start Game** 
+1. **Start Game**  
    Open the installed application, and you’ll be greeted by the main menu screen. Click the `Start` button to begin.
    
    ![Main Menu Start](https://github.com/BeauBeannie/tinguhasabulan/blob/main/readmeResources/spawn12.png)
 
-2. **Chapter Journal Appears**
+2. **Chapter Journal Appears**  
    You’ll be taken to the Journal, where Chapter 1 is unlocked by default.
    Click the `Next icon` button located at the lower-right corner of the screen.
    ![Click Next Button](https://github.com/BeauBeannie/tinguhasabulan/blob/main/readmeResources/spawn14.png)
 
-3. **Enter the Lobby**
+3. **Enter the Lobby**  
    Here, use your device to scan a valid image marker — this will spawn the Bakunawa into the AR space.
 
-   - **Scan the Marker**:  
+   - **Scan the Marker**:   
      Scan the following image below either from a different device or print the image. 
 
-    ![Image Marker](https://github.com/BeauBeannie/tinguhasabulan/blob/main/readmeResources/spawn11.png)
+      ![Image Marker](https://github.com/BeauBeannie/tinguhasabulan/blob/main/readmeResources/spawn11.png)
+  
+       Once the Bakunawa is visible and you're ready, press the `Play` button.
 
-     Once the Bakunawa is visible and you're ready, press the `Play` button.
+       ![Hosted Lobby Lan](https://github.com/BeauBeannie/tinguhasabulan/blob/main/readmeResources/spawn5.jpg)
 
-   ![Hosted Lobby Lan](https://github.com/BeauBeannie/tinguhasabulan/blob/main/readmeResources/spawn5.jpg)
+     > ‼️ **NOTE**:
+     > 1. If the Bakunawa did not spawn, try stepping further back and look for it in real space (move the POV around).
+     > 2. Rescan the image and look for the Bakunawa again.
+     > 3. If it still won't spawn, kindly exit the game, close it, and start again.
 
-   > ‼️ **NOTE**:
-   > 1. If the Bakunawa did not spawn, try stepping further back and look for it in real space (move the POV around).
-   > 2. Rescan the image and look for the Bakunawa again.
-   > 3. If it still won't spawn, kindly exit the game, close it, and start again.
-
-4. **Gameplay Overview**
+4. **Gameplay Overview**  
    During gameplay, the following UI elements will appear at the top of the screen:
 
-  🌕 Moon Counter – Track how many moons you need to collect.
+        🌕 Moon Counter – Track how many moons you need to collect.
+        
+        ⏱️ Timer – Shows how much time is left.
+        
+        ⏸️ Pause Button – Tap to pause the game.
+      
+   Use the on-screen controls to guide the Bakunawa through the skies:
+      
+        🕹️ Horizontal Joystick (left) — Move the Bakunawa left or right.
+        
+        🎚️ Vertical Controller (right) — Move up or down.
+        
+        🛑 Stop Button — Instantly stop vertical movement.
   
-  ⏱️ Timer – Shows how much time is left.
+    > Tip: Placing the vertical controller's joystick in the middle will also stop vertical movement, just like the stop button.
   
-  ⏸️ Pause Button – Tap to pause the game.
+     ![Gameplay](https://github.com/BeauBeannie/tinguhasabulan/blob/main/readmeResources/spawn.jpg)
 
-  Use the on-screen controls to guide the Bakunawa through the skies:
-
-  🕹️ Horizontal Joystick (left) — Move the Bakunawa left or right.
-  
-  🎚️ Vertical Controller (right) — Move up or down.
-  
-  🛑 Stop Button — Instantly stop vertical movement.
-
-> Tip: Placing the vertical controller's joystick in the middle will also stop vertical movement, just like the stop button.
-
-   ![Gameplay](https://github.com/BeauBeannie/tinguhasabulan/blob/main/readmeResources/spawn.jpg)
-
-5. Finish & Unlock New Chapters
+5. Finish & Unlock New Chapters  
   Once you’ve collected all moons, a cutscene will play.
 
     [Hosted Lobby Multiplayer](https://github.com/BeauBeannie/tinguhasabulan/blob/main/readmeResources/spawn8.jpg)
 
-  After the scene, click the Return to Journal button.
-
-  [Hosted Lobby Multiplayer](https://github.com/BeauBeannie/tinguhasabulan/blob/main/readmeResources/spawn7.jpg)
+    After the scene, click the Return to Journal button.
   
-  This will unlock the next chapter.
-  Repeat the gameplay, unlocking new chapters, until you reach the final level.
+    [Hosted Lobby Multiplayer](https://github.com/BeauBeannie/tinguhasabulan/blob/main/readmeResources/spawn7.jpg)
+    
+    This will unlock the next chapter.
+    Repeat the gameplay, unlocking new chapters, until you reach the final level.
   
-  ** 🐉 Only the most persistent will uncover the full legend of the Bakunawa. **
+  **🐉 Only the most persistent will uncover the full legend of the Bakunawa.**
 
   
 <!-- ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png) -->
