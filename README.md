@@ -26,7 +26,7 @@ They do not seek to harm, only to be with one another. They just wanted each oth
 
 **Tinguha sa Bulan** is a short AR (Augmented Reality) game that reimagines the traditional Visayan legend of the Bakunawa and the Seven Moons. This project explores how technology—specifically AR—can serve as a bridge between oral tradition and modern digital storytelling.
 
-The game mixes 2D pixel art and real-world interaction, where players engage with objects around them to piece together the narrative and relive the longing between the moon and the Bakunawa.
+The game mixes 2D art and real-world interaction, where players engage with objects around them to piece together the narrative and relive the longing between the moon and the Bakunawa.
 
 <!-- ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png) -->
 
